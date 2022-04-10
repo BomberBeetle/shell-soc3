@@ -5,13 +5,18 @@
 //Método de inserção de comandos para a árvore.
 //Args: Arvore, chave do comando, function pointer do comando (Assinatura: int comando(int argc, char** argv))
 
-void ctree_insert(CommandTree *tree, char *ckey, int (*ncmd) (int, char**)){
-  struct CTree_Node newNode = {.childL = NULL, .childR = NULL, .key = ckey, .cmd = ncmd};
+void ctree_insert(CommandTree *tree, char *ckey, int (*ncmd) (int, char*[])){
+  //struct CTree_Node newNode = {.childL = NULL, .childR = NULL, .cmd = ncmd};
+  struct CTree_Node *newNode = malloc(sizeof(struct CTree_Node));
+  strcpy(newNode->key, ckey);
+  newNode->childL = NULL;
+  newNode->childR = NULL;
+  newNode->cmd = ncmd;
 
   //Se a raiz da árvore for nula, faça ela ser o nó do novo comando.
 
   if(tree->root == NULL){
-    tree->root = &newNode;
+    tree->root = newNode;
     return;
   }
 
@@ -20,21 +25,21 @@ void ctree_insert(CommandTree *tree, char *ckey, int (*ncmd) (int, char**)){
   else{
     struct CTree_Node *curNode = tree->root;
     while(1){
-      if(strcmp(curNode->key, newNode.key) > 0){
+      if(strcmp(curNode->key, newNode->key) > 0){
         if(curNode->childR != NULL){
           curNode = curNode->childR;
         }
         else{
-          curNode->childR = &newNode;
+          curNode->childR = newNode;
           break;
         }
       }
       else{
         if(curNode->childL != NULL){
-          curNode = curNode->childR;
+          curNode = curNode->childL;
         }
         else{
-          curNode->childL = &newNode;
+          curNode->childL = newNode;
           break;
         }
       }
@@ -46,18 +51,19 @@ void ctree_insert(CommandTree *tree, char *ckey, int (*ncmd) (int, char**)){
 //Procurar por chave e executar.
 //Args: arvore, numero de argumentos de comando, valor dos argumentos de comando.
 
-int exec_command(CommandTree *tree, int argc, char** argv){
+int exec_command(CommandTree tree, int argc, char* argv[]){
 
-  //Se nao houverem argumentos, retorne o código de comando vazio
+  //Se nao houverem argumentos (ou se o argv[0] for nulo...), retorne o código de comando vazio
 
-  if(argc < 1){
+  if(argc < 1 || !(strcmp(argv[0],""))){
     return RESULT_EMPTY;
   }
+
 
   //Algoritmo de procura de elemento em árvore binária.
 
   else{
-    struct CTree_Node *curNode = tree->root;
+    struct CTree_Node *curNode = tree.root;
     while(1){
 
       //Se não for achado o elemento, retorne o código de comando não achado. lol
@@ -77,7 +83,7 @@ int exec_command(CommandTree *tree, int argc, char** argv){
           curNode = curNode->childR;
       }
       else{
-          curNode = curNode->childR;
+          curNode = curNode->childL;
       }
     }
   }
