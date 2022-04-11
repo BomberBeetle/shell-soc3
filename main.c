@@ -17,6 +17,8 @@ int main(int argc, char *argv[]){
     char in[READ_LIMIT];
     char* arg_buf[ARG_LIMIT];
     unsigned int arg_count = 0, last_index= 0;
+
+    int space_before = 0;
     
     arg_buf[0] = NULL;
 
@@ -48,12 +50,21 @@ int main(int argc, char *argv[]){
             } 
 
             else if(in[i] == ' '){
+                
+                if(i != 0) space_before = (in[i-1] == ' ');
+                else       space_before = 1;
+                
+                if(arg_count == 0){ //Checar espaços antes do comando
+                    if(space_before){
+                        last_index = i+1;
+                        continue;
+                    }
+                }
 
                 in[i]='\0'; //Adicionar terminador de string para separar o argumento do resto da string;
                 arg_buf[arg_count] = &(in[last_index]); //Crie um ponteiro pro começo do argumento.
-                last_index = i+1; //Assinale o começo do próximo token para o próximo caractere da string.
                 arg_count++; //Incremente a contagem de argumentos.
-
+                last_index = i+1; //Assinale o começo do próximo token para o próximo caractere da string.
             }
         }
         
