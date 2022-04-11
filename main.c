@@ -2,7 +2,8 @@
 
 #include "command.h"
 
-#include "test_commands.h"
+#include "commands/test_commands.h"
+#include "commands/exit.h"
 
 #define READ_LIMIT ARG_LIMIT*2
 
@@ -13,6 +14,8 @@ int main(int argc, char *argv[]){
     ctree_insert(&commands, "args", test_args);
     ctree_insert(&commands, "args_alias", test_args);
     ctree_insert(&commands, "test", test_success);
+
+    ctree_insert(&commands, "SAIR", exit_shell);
 
     char in[READ_LIMIT];
     char* arg_buf[ARG_LIMIT];

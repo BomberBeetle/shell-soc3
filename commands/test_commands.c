@@ -1,6 +1,6 @@
 #include "test_commands.h"
 
-#include "command.h"
+#include "../command.h"
 #include <stdio.h>
 
 int test_success(int argc, char* argv[]){
