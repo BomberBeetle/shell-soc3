@@ -2,8 +2,7 @@
 
 #include "command.h"
 
-#include "commands/test_commands.h"
-#include "commands/exit.h"
+#include "commands/*.h"
 
 #define READ_LIMIT ARG_LIMIT*2
 
@@ -11,10 +10,13 @@ int main(int argc, char *argv[]){
 
     CommandTree commands = {NULL};
 
+    //Comandos de teste; Tirar na versão final
     ctree_insert(&commands, "args", test_args);
     ctree_insert(&commands, "args_alias", test_args);
     ctree_insert(&commands, "test", test_success);
 
+    //Inserir comandos aqui
+    ctree_insert(&commands, "CRIAR", criar);
     ctree_insert(&commands, "SAIR", exit_shell);
 
     char in[READ_LIMIT];
