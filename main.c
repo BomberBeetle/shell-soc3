@@ -2,7 +2,14 @@
 
 #include "command.h"
 
-#include "commands/*.h"
+#include "commands/ajuda.h"
+#include "commands/criar.h"
+#include "commands/datahora.h"
+#include "commands/exit.h"
+#include "commands/inserir.h"
+#include "commands/limpar.h"
+
+#include "commands/test_commands.h"
 
 #define READ_LIMIT ARG_LIMIT*2
 
@@ -19,6 +26,10 @@ int main(int argc, char *argv[]){
     ctree_insert(&commands, "CRIAR", criar);
     ctree_insert(&commands, "INSERIR", inserir);
     ctree_insert(&commands, "SAIR", exit_shell);
+    ctree_insert(&commands, "LIMPAR", limpar);
+    ctree_insert(&commands, "DATA", data);
+    ctree_insert(&commands, "HORA", hora);
+    ctree_insert(&commands, "AJUDA", ajuda);
 
 
     char in[READ_LIMIT];

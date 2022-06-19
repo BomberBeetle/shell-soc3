@@ -1,0 +1,1 @@
+int ajuda(int, char*[]);

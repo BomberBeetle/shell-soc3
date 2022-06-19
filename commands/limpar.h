@@ -1,0 +1,1 @@
+int limpar(int, char*[]);
