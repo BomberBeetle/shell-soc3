@@ -1,0 +1,1 @@
+int inserir(int, char*[]);

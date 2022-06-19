@@ -17,7 +17,9 @@ int main(int argc, char *argv[]){
 
     //Inserir comandos aqui
     ctree_insert(&commands, "CRIAR", criar);
+    ctree_insert(&commands, "INSERIR", inserir);
     ctree_insert(&commands, "SAIR", exit_shell);
+
 
     char in[READ_LIMIT];
     char* arg_buf[ARG_LIMIT];
