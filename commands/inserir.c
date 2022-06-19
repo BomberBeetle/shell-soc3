@@ -6,11 +6,11 @@
 
 //TODO: Args handling + input stiching
 
-void stitch_insert_text(char* dest, int argc, char* argv[]){
+int stitch_insert_text(char* dest, int argc, char* argv[]){
 
     unsigned char reading = 0; //I don't want to include stdbool.h, so unsigned char will do.
 
-    for(int i = 2; i < argc; i++){
+    for(int i = 1; i < argc; i++){
      if(argv[i][0] != '\"' && !reading) continue;
      else if(!reading){
          reading = 1;
@@ -30,6 +30,7 @@ void stitch_insert_text(char* dest, int argc, char* argv[]){
          }
      }
     }
+    return reading?RESULT_ERROR:RESULT_SUCCESS;
 }
 
 int inserir(int argc, char * argv[])
@@ -39,10 +40,15 @@ int inserir(int argc, char * argv[])
         return RESULT_ERROR;
     }
 
-    char* File_Path = argv[1];
-
     char text[ARG_LIMIT] = "\0";
-    stitch_insert_text(text, argc, argv);
+    int stich_code = stitch_insert_text(text, argc, argv);
+
+    if(stich_code == RESULT_ERROR){
+        printf("Erro de sintaxe: não fechou/abriu aspas.\n");
+        return RESULT_ERROR;
+    }
+
+    char* File_Path = argv[argc-1];
 
     FILE *arq = fopen(File_Path,"r");
     if(arq == NULL)
