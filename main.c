@@ -8,6 +8,7 @@
 #include "commands/exit.h"
 #include "commands/inserir.h"
 #include "commands/limpar.h"
+#include "commands/ver.h"
 
 #include "commands/test_commands.h"
 
@@ -30,6 +31,7 @@ int main(int argc, char *argv[]){
     ctree_insert(&commands, "DATA", data);
     ctree_insert(&commands, "HORA", hora);
     ctree_insert(&commands, "AJUDA", ajuda);
+    ctree_insert(&commands, "VER", ver);
 
 
     char in[READ_LIMIT];
