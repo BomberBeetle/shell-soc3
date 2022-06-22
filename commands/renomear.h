@@ -1,0 +1,1 @@
+int renomear(int, char*[]);

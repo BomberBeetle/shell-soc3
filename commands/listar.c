@@ -13,7 +13,7 @@ int listar (int argc, char* argv[]){
     {
         while ((dir = readdir(d)) != NULL)
         {
-            printf("%s - %s\n", dir->d_name, dir->d_type==DT_DIR?"Diretório":"Arquivo");
+            printf("%s\n", dir->d_name);
         }
         closedir(d);
     }
@@ -28,7 +28,7 @@ int listar (int argc, char* argv[]){
     {
         while ((dir = readdir(d)) != NULL)
         {
-            printf("%s - %s\n", dir->d_name, dir->d_type==DT_DIR?"Diretório":"Arquivo");
+            printf("%s\n", dir->d_name);
         }
         closedir(d);
         return RESULT_SUCCESS;

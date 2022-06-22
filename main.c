@@ -11,6 +11,8 @@
 #include "commands/ver.h"
 #include "commands/listar.h"
 #include "commands/apagar.h"
+#include "commands/renomear.h"
+#include "commands/mover.h"
 
 #include "commands/test_commands.h"
 
@@ -19,11 +21,6 @@
 int main(int argc, char *argv[]){
 
     CommandTree commands = {NULL};
-
-    //Comandos de teste; Tirar na versão final
-    ctree_insert(&commands, "args", test_args);
-    ctree_insert(&commands, "args_alias", test_args);
-    ctree_insert(&commands, "test", test_success);
 
     //Inserir comandos aqui
     ctree_insert(&commands, "CRIAR", criar);
@@ -37,6 +34,8 @@ int main(int argc, char *argv[]){
     ctree_insert(&commands, "LISTAR", listar);
     ctree_insert(&commands, "APAGAR", apagar);
     ctree_insert(&commands, "DELETAR", apagar);
+    ctree_insert(&commands, "RENOMEAR", renomear);
+    ctree_insert(&commands, "MOVER", mover);
 
 
     char in[READ_LIMIT];
