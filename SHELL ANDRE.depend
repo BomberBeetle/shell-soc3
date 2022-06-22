@@ -1,0 +1,80 @@
+# depslib dependency file v1.0
+1655727438 source:c:\users\bryan\onedrive\햞ea de trabalho\bcc- if salto\sistemas operacionais 1\shell andre\command.c
+	"command.h"
+	<stdlib.h>
+	<string.h>
+
+1655727438 c:\users\bryan\onedrive\햞ea de trabalho\bcc- if salto\sistemas operacionais 1\shell andre\command.h
+
+1655727438 source:c:\users\bryan\onedrive\햞ea de trabalho\bcc- if salto\sistemas operacionais 1\shell andre\commands\ajuda.c
+	"../command.h"
+	<stdio.h>
+
+1655727438 source:c:\users\bryan\onedrive\햞ea de trabalho\bcc- if salto\sistemas operacionais 1\shell andre\commands\datahora.c
+	"datahora.h"
+	"../command.h"
+	<time.h>
+	<stdio.h>
+
+1655727438 c:\users\bryan\onedrive\햞ea de trabalho\bcc- if salto\sistemas operacionais 1\shell andre\commands\datahora.h
+
+1655727438 source:c:\users\bryan\onedrive\햞ea de trabalho\bcc- if salto\sistemas operacionais 1\shell andre\commands\exit.c
+	<stdlib.h>
+	"../command.h"
+
+1655727438 source:c:\users\bryan\onedrive\햞ea de trabalho\bcc- if salto\sistemas operacionais 1\shell andre\commands\inserir.c
+	"inserir.h"
+	"../command.h"
+	<stdio.h>
+	<string.h>
+
+1655727438 c:\users\bryan\onedrive\햞ea de trabalho\bcc- if salto\sistemas operacionais 1\shell andre\commands\inserir.h
+
+1655727438 source:c:\users\bryan\onedrive\햞ea de trabalho\bcc- if salto\sistemas operacionais 1\shell andre\commands\limpar.c
+	"../command.h"
+	<stdio.h>
+
+1655727438 source:c:\users\bryan\onedrive\햞ea de trabalho\bcc- if salto\sistemas operacionais 1\shell andre\commands\test_commands.c
+	"test_commands.h"
+	"../command.h"
+	<stdio.h>
+
+1655727438 c:\users\bryan\onedrive\햞ea de trabalho\bcc- if salto\sistemas operacionais 1\shell andre\commands\test_commands.h
+
+1655727438 source:c:\users\bryan\onedrive\햞ea de trabalho\bcc- if salto\sistemas operacionais 1\shell andre\commands\ver.c
+	"../command.h"
+	<stdio.h>
+
+1655935575 source:c:\users\bryan\onedrive\햞ea de trabalho\bcc- if salto\sistemas operacionais 1\shell andre\main.c
+	<stdio.h>
+	"command.h"
+	"commands/ajuda.h"
+	"commands/criar.h"
+	"commands/datahora.h"
+	"commands/exit.h"
+	"commands/inserir.h"
+	"commands/limpar.h"
+	"commands/ver.h"
+	"commands/test_commands.h"
+
+1655727438 c:\users\bryan\onedrive\햞ea de trabalho\bcc- if salto\sistemas operacionais 1\shell andre\commands\ajuda.h
+
+1655727438 c:\users\bryan\onedrive\햞ea de trabalho\bcc- if salto\sistemas operacionais 1\shell andre\commands\criar.h
+
+1655727438 c:\users\bryan\onedrive\햞ea de trabalho\bcc- if salto\sistemas operacionais 1\shell andre\commands\exit.h
+
+1655727438 c:\users\bryan\onedrive\햞ea de trabalho\bcc- if salto\sistemas operacionais 1\shell andre\commands\limpar.h
+
+1655727438 c:\users\bryan\onedrive\햞ea de trabalho\bcc- if salto\sistemas operacionais 1\shell andre\commands\ver.h
+
+1655935739 source:c:\users\bryan\onedrive\햞ea de trabalho\bcc- if salto\sistemas operacionais 1\shell andre\commands\listar.c
+	"../command.h"
+
+1655936816 source:c:\users\bryan\onedrive\햞ea de trabalho\bcc- if salto\sistemas operacionais 1\shell andre\commands\criar.c
+	<windows.h>
+	<sys/stat.h>
+	<stdbool.h>
+	<stdio.h>
+	<string.h>
+	"../command.h"
+

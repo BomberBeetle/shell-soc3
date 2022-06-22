@@ -53,6 +53,7 @@ dkms.conf
 
 #Resultados de compilação
 bin/
+obj/
 
 #Dumps do valgrind
 vgcore.*
