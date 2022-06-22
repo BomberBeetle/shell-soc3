@@ -10,6 +10,7 @@
 #include "commands/limpar.h"
 #include "commands/ver.h"
 #include "commands/listar.h"
+#include "commands/apagar.h"
 
 #include "commands/test_commands.h"
 
@@ -34,6 +35,8 @@ int main(int argc, char *argv[]){
     ctree_insert(&commands, "AJUDA", ajuda);
     ctree_insert(&commands, "VER", ver);
     ctree_insert(&commands, "LISTAR", listar);
+    ctree_insert(&commands, "APAGAR", apagar);
+    ctree_insert(&commands, "DELETAR", apagar);
 
 
     char in[READ_LIMIT];

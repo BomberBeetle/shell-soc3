@@ -1,0 +1,1 @@
+int apagar(int, char*[]);
