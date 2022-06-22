@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="SHELL-SOC3" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/SHELL ANDRE" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/SHELL ANDRE" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="command.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="command.h" />
+		<Unit filename="commands/ajuda.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="commands/ajuda.h" />
+		<Unit filename="commands/apagar.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="commands/apagar.h" />
+		<Unit filename="commands/criar.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="commands/criar.h" />
+		<Unit filename="commands/datahora.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="commands/datahora.h" />
+		<Unit filename="commands/exit.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="commands/exit.h" />
+		<Unit filename="commands/inserir.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="commands/inserir.h" />
+		<Unit filename="commands/limpar.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="commands/limpar.h" />
+		<Unit filename="commands/listar.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="commands/listar.h" />
+		<Unit filename="commands/mover.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="commands/mover.h" />
+		<Unit filename="commands/renomear.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="commands/renomear.h" />
+		<Unit filename="commands/test_commands.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="commands/test_commands.h" />
+		<Unit filename="commands/ver.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="commands/ver.h" />
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
