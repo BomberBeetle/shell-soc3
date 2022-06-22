@@ -9,6 +9,7 @@
 #include "commands/inserir.h"
 #include "commands/limpar.h"
 #include "commands/ver.h"
+#include "commands/listar.h"
 
 #include "commands/test_commands.h"
 
@@ -32,6 +33,7 @@ int main(int argc, char *argv[]){
     ctree_insert(&commands, "HORA", hora);
     ctree_insert(&commands, "AJUDA", ajuda);
     ctree_insert(&commands, "VER", ver);
+    ctree_insert(&commands, "LISTAR", listar);
 
 
     char in[READ_LIMIT];

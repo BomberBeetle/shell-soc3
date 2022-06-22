@@ -1,0 +1,1 @@
+int listar(int, char*[]);
